@@ -107,21 +107,14 @@ class SortingRobot:
         # If item in hand is smaller than item in the list at current index 
             # swap it continuing until can_move_left is False 
         # Else continue to next item
-        can_move_right = True
-        while can_move_right:
-            can_move_right = False
-            if l[self._position] > l[self._position+1]:
+    
+        while can_move_right():
+            if self.can_move_right():
                 self.swap_item()
-                self._position += 1
-                print(l[i])
-                    
+                self.move_right()
+                
 
-                    
-
-        
         pass
-
-    print(sort([15, 41, 58, 49, 26, 4, 28, 8, 61]))
 
 if __name__ == "__main__":
     # Test our your implementation from the command line
